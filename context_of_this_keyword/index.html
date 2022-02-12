@@ -34,7 +34,7 @@
         // console.log(printStudent());
 
         printStudent.call(studentObj, 100, 200, "call with studentObj");
-        printStudent.call(studentObj2, 100, 200, "call with studentObj2");
+        printStudent.call(studentObj2, 250, 450, "call with studentObj2");
 
         const func = printStudent.bind(studentObj);
         console.warn('is after bind');
