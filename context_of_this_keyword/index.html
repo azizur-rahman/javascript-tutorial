@@ -7,7 +7,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Context of this keyword</title>
     <script>
-        console.log(window);
+        // console.log(window);
+        // console.log(this);
+
+        // console.log(window == this);
+        // console.log(window === this);
+
+        var studentObj = {
+            Name: 'Azizur',
+            Role: 100
+        }
+
+        function printStudent() {
+            return this.studentObj.Name;
+        }
+
+        console.log(printStudent());
+
     </script>
 </head>
 
