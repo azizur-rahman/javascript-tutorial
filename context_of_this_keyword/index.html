@@ -7,22 +7,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Context of this keyword</title>
     <script>
-        // console.log(window);
-        // console.log(this);
+
+        // console.log(window); //window object
+        // console.log(this); // this object
 
         // console.log(window == this);
         // console.log(window === this);
 
         var studentObj = {
-            Name: 'Azizur',
+            Name: 'Azizur Rahman',
             Role: 100
         }
 
-        function printStudent() {
-            return this.studentObj.Name;
+        var studentObj2 = {
+            Name: 'Masud Ahmed',
+            Role: 101
         }
 
-        console.log(printStudent());
+        function printStudent() {
+            console.log(this);
+            return this.Name;
+        }
+
+        printStudent();
+        // console.log(printStudent());
+
+        printStudent.call(studentObj);
+        printStudent.call(studentObj2);
 
     </script>
 </head>
