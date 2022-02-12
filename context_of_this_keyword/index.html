@@ -24,16 +24,23 @@
             Role: 101
         }
 
-        function printStudent() {
+        function printStudent(a, b, context) {
             console.log(this);
+            console.log(a, b, context);
             return this.Name;
         }
 
-        printStudent();
+        printStudent(10, 20, "window");
         // console.log(printStudent());
 
-        printStudent.call(studentObj);
-        printStudent.call(studentObj2);
+        printStudent.call(studentObj, 100, 200, "call with studentObj");
+        printStudent.call(studentObj2, 100, 200, "call with studentObj2");
+
+        const func = printStudent.bind(studentObj);
+        console.warn('is after bind');
+        func(500, 1000, "call with bind");
+
+        printStudent.apply(studentObj, [450, 550, "call with apply"])
 
     </script>
 </head>
