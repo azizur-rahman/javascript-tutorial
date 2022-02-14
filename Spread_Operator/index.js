@@ -14,3 +14,23 @@ studentObj.Role = 1;
 console.log(cloned, "CLONED OBJECT, after changing the main object");
 console.log(studentObj, "Main object after changing");
 
+/// new example
+const blueSquare = {
+    length: 100,
+    color: "blue"
+};
+
+const style = {
+    color: "green"
+};
+
+let rgb = ['red', 'green', 'blue'];
+
+const greenSquare = {
+    ...blueSquare,
+    ...style,
+    ...rgb
+};
+
+console.log(greenSquare);
+
