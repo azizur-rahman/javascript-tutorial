@@ -34,3 +34,8 @@ const greenSquare = {
 
 console.log(greenSquare);
 
+console.log(NaN == NaN);
+// let fn = Symbol();
+console.log(Symbol() == Symbol());
+// console.log(fn);
+
