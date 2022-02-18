@@ -58,4 +58,33 @@ setTimeout(() => {
     console.warn('Execute later after 1 second.');
 }, 1000);
 
-/// Immediately invoked function execution
+/// Immediately invoked function execution (IIEF)
+(function () {
+    console.warn('IIEF');
+})();
+
+
+let person = {
+    FistName: 'Azizur',
+    LastName: 'Rahman'
+};
+
+(function () {
+    console.warn(person.FistName + ' ' + person.LastName);
+})(person);
+
+/// Arrow functions
+
+let showArrowFn = () => console.log('Anonymous Function with arrow function');
+showArrowFn();
+
+function recursionSum(n) {
+
+    if (n <= 1) {
+        return n;
+    }
+
+    return n + recursionSum(n - 1);
+}
+
+console.warn(recursionSum(100));
