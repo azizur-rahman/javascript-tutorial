@@ -42,3 +42,20 @@ products.sort(compareBy('price'));
 console.table(products);
 
 
+/// JavaScript anonymous functions
+
+(function () {
+
+});
+
+let show = function () {
+    console.warn('Print Anonymous function');
+}
+
+show();
+
+setTimeout(() => {
+    console.warn('Execute later after 1 second.');
+}, 1000);
+
+/// Immediately invoked function execution
