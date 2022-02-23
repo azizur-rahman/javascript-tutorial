@@ -54,9 +54,9 @@ let show = function () {
 
 show();
 
-setTimeout(() => {
-    console.warn('Execute later after 1 second.');
-}, 1000);
+// setTimeout(() => {
+//     console.warn('Execute later after 1 second.');
+// }, 1000);
 
 /// Immediately invoked function execution (IIEF)
 (function () {
@@ -88,3 +88,34 @@ function recursionSum(n) {
 }
 
 console.warn(recursionSum(100));
+
+/// JavaScript Default Parameters
+
+function say(message = 'Hi !') {
+    // console.log(typeof message);
+    // message = typeof message !== 'undefined' ? message : 'Hi !';
+    console.log(message);
+}
+say();
+say(undefined);
+say('Hello');
+
+function sumN(x = 1, y = x, z = x + y) {
+    return x + y + z;
+}
+console.log(sumN());
+
+function subtract(x = y, y = 1) {
+    return x - y;
+}
+subtract(10);
+console.log(subtract(10));
+
+function add(x, y = 1, z = 2) {
+    console.log('arguments # ', arguments.length);
+    return x + y + z;
+}
+
+add(10); // 1
+add(10, 20); // 2
+add(10, 20, 30); // 3
