@@ -38,7 +38,10 @@ let person = {
     LastName: 'Rahman',
     greet() { /// for ES6
         console.log('Hello world! 3');
+    },
+    getFullName: function () {
+        return this.FirstName + ' ' + this.LastName;
     }
 };
-
-person.greet();
+console.log(person.getFullName());
+// person.greet();
