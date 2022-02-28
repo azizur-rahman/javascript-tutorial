@@ -10,6 +10,41 @@
         console.log(typeof Object);
         console.log(Object.prototype);
         console.log(Object.prototype.constructor === Object);
+
+        // function Person(firstName, lastName) {
+        //     this.firstName = firstName;
+        //     this.lastName = lastName;
+        // }
+
+        // Person.prototype.getFullName = function () {
+        //     return this.firstName + ' ' + this.lastName;
+        // };
+
+        // let p1 = new Person('Azizur ', 'Rahman');
+        // let p2 = new Person('Masudur ', 'Rahman');
+
+        // console.log(p1.getFullName());
+        // console.log(p2.getFullName());
+
+        //// ES6 using class
+
+        class Person {
+            constructor(firstName, lastName) {
+                this.firstName = firstName;
+                this.lastName = lastName;
+            }
+
+            getFullName() {
+                return this.firstName + " " + this.lastName;
+            }
+        }
+
+        let p1 = new Person('Azizur ', 'Rahman');
+        let p2 = new Person('Masudur ', 'Rahman');
+
+        console.log(p1.getFullName());
+        console.log(p2.getFullName());
+
     </script>
 </head>
 
